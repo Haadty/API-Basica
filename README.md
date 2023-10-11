@@ -1,11 +1,12 @@
 # API-Basica
-=======================================================================================
+
+==========================================================================
 
 a API usa os seguintes recursos principalmente: API Rest, TypeScript, BodyParser
 
 Outros mais secundários como: cpf-cnpj-validator e validator.js
 
-==============================================================================
+==========================================================================
 
 ## Divisão da API em Arquivos:
 
@@ -19,7 +20,7 @@ Outros mais secundários como: cpf-cnpj-validator e validator.js
 
 -app.ts: onde tudo é ligado no servidor e no json para passagem de informações
 
-=======================================================================================
+==========================================================================
 
 ## Metodos:
 
@@ -33,7 +34,7 @@ Os comandos mais básicos para se usar com a API para conexão de Cliente / Serv
 
 'DELETE/:nome': deleta um funcionário pelo seu Nome
 
-=======================================================================================
+==========================================================================
 
 ## Tutorial de Uso:
 
