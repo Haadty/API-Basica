@@ -5,7 +5,7 @@ a API usa os seguintes recursos principalmente: API Rest, TypeScript, BodyParser
 
 Outros mais secundários como: cpf-cnpj-validator e validator.js
 
-=======================================================================================
+==============================================================================
 
 ## Divisão da API em Arquivos:
 
