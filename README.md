@@ -48,4 +48,5 @@ Para testar a API siga os passos abaixo:
 
 4) Depois de tudo isso só usar os comandos comentados acima 
 
+Aviso: Todas as Libs necessárias já estão dentro do projeto para maior facilidade no uso 
 
