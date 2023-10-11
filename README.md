@@ -26,13 +26,13 @@ Outros mais secundários como: cpf-cnpj-validator e validator.js
 
 Os comandos mais básicos para se usar com a API para conexão de Cliente / Server:
 
-'GET/': lista todo os funcionários no banco de dados
+"GET/": lista todo os funcionários no banco de dados
 
-'POST/': cadastrar um funcionário novo no banco de dados
+"POST/": cadastrar um funcionário novo no banco de dados
 
-'PUT/:id':atualiza a tabela funcionários pela ID
+"PUT/:id": atualiza a tabela funcionários pela ID
 
-'DELETE/:nome': deleta um funcionário pelo seu Nome
+"DELETE/:nome": deleta um funcionário pelo seu Nome
 
 ==========================================================================
 
@@ -42,9 +42,9 @@ Para testar a API siga os passos abaixo:
 
 1) Primeiro Inicie Banco de Dados presente na pasta 'DB' em seu Mysql Workbench
 
-2) Após isso se já não tiver depurado para conversão de TypeScript para JavaScript no terminal execute o seguinte comando: npm start
+2) Após isso se já não tiver depurado para conversão de TypeScript para JavaScript no terminal execute o seguinte comando: "npm start"
 
-3) Com isso o server já começa automaticamente para testes mais se deseja iniciar de outra forma, pode se colocar o seguinte código no terminal: node dist/app.ts
+3) Com isso a interação já começa automaticamente, para testes mais se deseja iniciar de outra forma, pode se colocar o seguinte código no terminal: "node dist/app.ts"
 
 4) Depois de tudo isso só usar os comandos comentados acima 
 
