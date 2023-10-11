@@ -10,9 +10,13 @@ Outros mais secundários como: cpf-cnpj-validator e validator.js
 ## Divisão da API em Arquivos:
 
 -dbconfig.ts: onde e configurado a conexão com o banco de dados
+
 -funcionario.ts: onde é definido como vai ser a tabela funcionario do mysql
+
 -order.ts: onde tem a conexão e os métodos de mysql para usar no Banco de Dados
+
 -orderRouter.ts: ligando os métodos mysql a api rest e também validando tudo 
+
 -app.ts: onde tudo é ligado no servidor e no json para passagem de informações
 
 =======================================================================================
