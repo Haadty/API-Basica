@@ -28,18 +28,22 @@ Os comandos mais básicos para se usar com a API para conexão de Cliente / Serv
 
 ### Listar Funcionários (GET)
 Rota: /
+
 Descrição: Retorna uma lista de todos os funcionários no banco de dados.
 
 ### Cadastrar Funcionário (POST)
 Rota: /
+
 Descrição: Cadastra um novo funcionário no banco de dados.
 
 ### Atualizar Funcionário (PUT)
 Rota: /:id
+
 Descrição: Atualiza um funcionário existente com base no ID fornecido.
 
 ### Deletar Funcionário (DELETE)
 Rota: /:nome
+
 Descrição: Deleta um funcionário com base no nome fornecido.
 
 ==========================================================================
