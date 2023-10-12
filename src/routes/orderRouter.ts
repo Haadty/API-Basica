@@ -1,12 +1,11 @@
-//Ligação dos metodos do BD para uso do lado do Cliente 
-
 import express, { Request, Response } from "express";
 import * as orderModel from "../model/order";
 import { Funcionario } from "../types/funcionario";
 import { cpf } from "cpf-cnpj-validator";
+import validator from "validator"; // Importe a biblioteca validator explicitamente
+
 const orderRouter = express.Router();
 
-//comando usando get para listar todo os funcionarios
 orderRouter.get("/", async (req: Request, res: Response) => {
   orderModel.Findall((err: Error, orders: Funcionario[]) => {
     if (err) {
@@ -16,7 +15,6 @@ orderRouter.get("/", async (req: Request, res: Response) => {
   });
 });
 
-//comando usando post para adicionar um funcionario
 orderRouter.post("/", async (req: Request, res: Response) => {
   const newOrder: Funcionario = req.body;
   orderModel.Create(newOrder, (err: Error, orderId: number) => {
@@ -25,24 +23,23 @@ orderRouter.post("/", async (req: Request, res: Response) => {
     }
 
     if (newOrder.nome.length < 5) {
-      return res.status(500).json({ message: "nome do funcionario menor que 5 letras" });
+      return res.status(500).json({ message: "Nome do funcionário menor que 5 letras" });
     }
 
-    if (cpf.isValid(newOrder.cpf)) {
-      return res.status(500).json({ message: "cpf invalido" });
+    if (!cpf.isValid(newOrder.cpf)) { // Corrija a validação do CPF
+      return res.status(500).json({ message: "CPF inválido" });
     } else {
       newOrder.cpf = cpf.format(newOrder.cpf);
     }
 
-    if (!require("validator").validator.isEmail(newOrder.email)) {
-      return res.status(500).json({ message: "email invalido" });
+    if (!validator.isEmail(newOrder.email)) { // Corrija a validação do e-mail
+      return res.status(500).json({ message: "E-mail inválido" });
     }
 
     res.status(200).json({ orderId: orderId });
   });
 });
 
-//comando usando put para atualizar um funcionario pelo id
 orderRouter.put("/:id", async (req: Request, res: Response) => {
   const order: Funcionario = req.body;
   orderModel.Update(order, (err: Error) => {
@@ -53,8 +50,7 @@ orderRouter.put("/:id", async (req: Request, res: Response) => {
   });
 });
 
-//comando usando delete para deletar um funcionario pelo nome
-orderRouter.delete("/:nome", async (req: Request, res: Response) => {
+orderRouter.delete("/", async (req: Request, res: Response) => {
   const order: Funcionario = req.body;
   orderModel.Delete(order, (err: Error) => {
     if (err) {

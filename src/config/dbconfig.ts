@@ -5,5 +5,5 @@ export const dbConfig = {
     user: "root",
     password: "root",
     database: "funcionario",
-    port: 3360,
+    port: 3306,
   };
