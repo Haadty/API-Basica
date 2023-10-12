@@ -1,8 +1,10 @@
+//Mesclagem de Rotas com as Requisições
+
 import express, { Request, Response } from "express";
 import * as orderModel from "../model/order";
 import { Funcionario } from "../types/funcionario";
 import { cpf } from "cpf-cnpj-validator";
-import validator from "validator"; // Importe a biblioteca validator explicitamente
+import validator from "validator"; 
 
 const orderRouter = express.Router();
 
