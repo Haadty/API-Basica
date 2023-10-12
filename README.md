@@ -60,9 +60,7 @@ Para testar a API siga os passos abaixo:
 
 4) A API estará ativa e pronta para uso. Você pode interagir com ela por meio de solicitações HTTP
 
-Aviso: 
-
-Se você precisar alterar as configurações de conexão com o banco de dados, edite o arquivo dbconfig.ts para refletir as novas configurações, como host, usuário, senha, nome do banco de dados ou porta. Certifique-se de que as configurações do banco de dados correspondam às configurações do seu ambiente.
+Aviso: Se você precisar alterar as configurações de conexão com o banco de dados, edite o arquivo dbconfig.ts para refletir as novas configurações, como host, usuário, senha, nome do banco de dados ou porta. Certifique-se de que as configurações do banco de dados correspondam às configurações do seu ambiente.
 
 ### Exemplo de Solicitações:
 
@@ -73,11 +71,13 @@ GET http://localhost:5000/
 ##### Cadastrar um novo funcionário (POST):
 
 POST http://localhost:5000/
+
 Body JSON: { "id": 1, "nome": "Haadty", "data_nasc": 2021-01-01", "cpf": "564.456.789-00", "email": "daratyd@gmail.com", "tel": "69 9234-1834" }
 
 ##### Atualizar um funcionário pelo ID (PUT):
 
 PUT http://localhost:5000/1
+
 Body JSON: { "nome": "Novo Haadty", "data_nasc": "2005-02-02", "cpf": "987.632.321-00", "email": "emailnovo@gmail.com", "tel": "69 9452-3210" }
 
 ##### Deletar um funcionário pelo nome (DELETE):
