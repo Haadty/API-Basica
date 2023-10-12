@@ -85,3 +85,5 @@ Body JSON: { "nome": "Novo Haadty", "data_nasc": "2005-02-02", "cpf": "987.632.3
 ##### Deletar um funcionário pelo nome (DELETE):
 
 DELETE http://localhost:5000/Haadty
+
+Aviso: O servidor da API REST está configurado para usar a porta 5000, por isso fica: "http://localhost:5000/" Nos comandos de exemplo
